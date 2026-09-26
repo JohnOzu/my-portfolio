@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+:root {
+	--bg: #F5F6F3;
+	--ink: #15181C;
+	--ink-soft: #4B5158;
+	--line: rgba(21, 24, 28, 0.10);
+	--line-soft: rgba(21, 24, 28, 0.055);
+	--accent: #1E3AF0;
+	--accent-soft: rgba(30, 58, 240, 0.10);
+	--paper: #FFFFFF;
+	--radius: 2px;
+	box-sizing: border-box;
+	padding-top: env(safe-area-inset-top, 0px);
+	padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root:not([data-theme="light"]) {
+		--bg: #101214;
+		--ink: #F2F3F1;
+		--ink-soft: #9AA0A6;
+		--line: rgba(242, 243, 241, 0.12);
+		--line-soft: rgba(242, 243, 241, 0.05);
+		--accent: #5C7CFF;
+		--accent-soft: rgba(92, 124, 255, 0.14);
+		--paper: #17191C;
+	}
+}
+
+:root[data-theme="dark"] {
+	--bg: #101214;
+	--ink: #F2F3F1;
+	--ink-soft: #9AA0A6;
+	--line: rgba(242, 243, 241, 0.12);
+	--line-soft: rgba(242, 243, 241, 0.05);
+	--accent: #5C7CFF;
+	--accent-soft: rgba(92, 124, 255, 0.14);
+	--paper: #17191C;
+}
+
+@theme {
+	--color-bg: var(--bg);
+	--color-ink: var(--ink);
+	--color-ink-soft: var(--ink-soft);
+	--color-line: var(--line);
+	--color-line-soft: var(--line-soft);
+	--color-accent: var(--accent);
+	--color-accent-soft: var(--accent-soft);
+	--color-paper: var(--paper);
+
+	--font-display: var(--font-space-grotesk), sans-serif;
+	--font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+	--font-mono: var(--font-jetbrains-mono), monospace;
+
+	--radius-sm: var(--radius);
+}
+
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: calc(76px + env(safe-area-inset-top, 0px));
+}
+
+@keyframes settle-up {
+	0% {
+		opacity: 0;
+		transform: translateY(12px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.animate-settle-0 {
+	animation: settle-up 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+	animation-delay: 40ms;
+}
+
+.animate-settle-1 {
+	animation: settle-up 450ms cubic-bezier(0.16, 1, 0.3, 1) both;
+	animation-delay: 120ms;
+}
+
+.animate-settle-2 {
+	animation: settle-up 450ms cubic-bezier(0.16, 1, 0.3, 1) both;
+	animation-delay: 200ms;
+}
+
+.animate-settle-3 {
+	animation: settle-up 450ms cubic-bezier(0.16, 1, 0.3, 1) both;
+	animation-delay: 280ms;
+}
+
+.animate-settle-4 {
+	animation: settle-up 450ms cubic-bezier(0.16, 1, 0.3, 1) both;
+	animation-delay: 360ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	::before,
+	::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
