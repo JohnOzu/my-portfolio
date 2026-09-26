@@ -54,6 +54,17 @@ export default function HeroSection() {
 					>
 						About me
 					</a>
+					<a
+						className="font-sans font-medium text-[14.5px] px-[26px] py-[13px] rounded-xs border border-line text-ink transition-all duration-200 hover:border-accent hover:text-accent hover:-translate-y-0.5 inline-flex items-center gap-1.5"
+						href="/resume.pdf"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<span>Resume</span>
+						<span className="text-xs transition-transform duration-200" aria-hidden="true">
+							↗
+						</span>
+					</a>
 				</div>
 				<div className="mt-16 font-mono text-xs text-ink-soft flex items-center gap-2.5 animate-settle-4">
 					<div className="w-[1px] h-7 bg-gradient-to-b from-ink-soft to-transparent opacity-60" />

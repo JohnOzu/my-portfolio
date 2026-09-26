@@ -56,56 +56,70 @@ export default function Navbar() {
 				>
 					JL<span className="text-accent">.</span>DEV
 				</a>
-				<div className="flex items-center gap-9">
+				<div className="flex items-center gap-5 sm:gap-8">
+					<div className="hidden sm:flex items-center gap-6 sm:gap-8">
+						<a
+							href="#about"
+							onClick={(e) => handleScrollTo(e, "about")}
+							className="group relative text-sm text-ink-soft hover:text-ink py-1 transition-colors duration-200 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-px after:bg-accent after:transition-[width] after:duration-250 hover:after:w-full cursor-pointer"
+						>
+							<span className="font-mono text-[11px] text-ink-soft opacity-60 mr-1">
+								01
+							</span>
+							About
+						</a>
+						<a
+							href="#skills"
+							onClick={(e) => handleScrollTo(e, "skills")}
+							className="group relative text-sm text-ink-soft hover:text-ink py-1 transition-colors duration-200 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-px after:bg-accent after:transition-[width] after:duration-250 hover:after:w-full cursor-pointer"
+						>
+							<span className="font-mono text-[11px] text-ink-soft opacity-60 mr-1">
+								02
+							</span>
+							Skills
+						</a>
+						<a
+							href="#work"
+							onClick={(e) => handleScrollTo(e, "work")}
+							className="group relative text-sm text-ink-soft hover:text-ink py-1 transition-colors duration-200 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-px after:bg-accent after:transition-[width] after:duration-250 hover:after:w-full cursor-pointer"
+						>
+							<span className="font-mono text-[11px] text-ink-soft opacity-60 mr-1">
+								03
+							</span>
+							Projects
+						</a>
+						<a
+							href="#experience"
+							onClick={(e) => handleScrollTo(e, "experience")}
+							className="group relative text-sm text-ink-soft hover:text-ink py-1 transition-colors duration-200 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-px after:bg-accent after:transition-[width] after:duration-250 hover:after:w-full cursor-pointer"
+						>
+							<span className="font-mono text-[11px] text-ink-soft opacity-60 mr-1">
+								04
+							</span>
+							Experience
+						</a>
+						<a
+							href="#contact"
+							onClick={(e) => handleScrollTo(e, "contact")}
+							className="group relative text-sm text-ink-soft hover:text-ink py-1 transition-colors duration-200 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-px after:bg-accent after:transition-[width] after:duration-250 hover:after:w-full cursor-pointer"
+						>
+							<span className="font-mono text-[11px] text-ink-soft opacity-60 mr-1">
+								05
+							</span>
+							Contact
+						</a>
+					</div>
+					<div className="hidden sm:block h-4 w-px bg-line" aria-hidden="true" />
 					<a
-						href="#about"
-						onClick={(e) => handleScrollTo(e, "about")}
-						className="group relative text-sm text-ink-soft hover:text-ink py-1 transition-colors duration-200 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-px after:bg-accent after:transition-[width] after:duration-250 hover:after:w-full cursor-pointer"
+						href="/resume.pdf"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="font-mono text-xs px-3 py-1.5 rounded-xs border border-line text-ink hover:border-accent hover:text-accent transition-colors duration-200 inline-flex items-center gap-1.5"
 					>
-						<span className="font-mono text-[11px] text-ink-soft opacity-60 mr-1">
-							01
+						<span>Resume</span>
+						<span className="text-[10px] opacity-70" aria-hidden="true">
+							↗
 						</span>
-						About
-					</a>
-					<a
-						href="#skills"
-						onClick={(e) => handleScrollTo(e, "skills")}
-						className="group relative text-sm text-ink-soft hover:text-ink py-1 transition-colors duration-200 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-px after:bg-accent after:transition-[width] after:duration-250 hover:after:w-full cursor-pointer"
-					>
-						<span className="font-mono text-[11px] text-ink-soft opacity-60 mr-1">
-							02
-						</span>
-						Skills
-					</a>
-					<a
-						href="#work"
-						onClick={(e) => handleScrollTo(e, "work")}
-						className="group relative text-sm text-ink-soft hover:text-ink py-1 transition-colors duration-200 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-px after:bg-accent after:transition-[width] after:duration-250 hover:after:w-full cursor-pointer"
-					>
-						<span className="font-mono text-[11px] text-ink-soft opacity-60 mr-1">
-							03
-						</span>
-						Projects
-					</a>
-					<a
-						href="#experience"
-						onClick={(e) => handleScrollTo(e, "experience")}
-						className="group relative text-sm text-ink-soft hover:text-ink py-1 transition-colors duration-200 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-px after:bg-accent after:transition-[width] after:duration-250 hover:after:w-full cursor-pointer"
-					>
-						<span className="font-mono text-[11px] text-ink-soft opacity-60 mr-1">
-							04
-						</span>
-						Experience
-					</a>
-					<a
-						href="#contact"
-						onClick={(e) => handleScrollTo(e, "contact")}
-						className="group relative text-sm text-ink-soft hover:text-ink py-1 transition-colors duration-200 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-px after:bg-accent after:transition-[width] after:duration-250 hover:after:w-full cursor-pointer"
-					>
-						<span className="font-mono text-[11px] text-ink-soft opacity-60 mr-1">
-							05
-						</span>
-						Contact
 					</a>
 				</div>
 			</nav>
