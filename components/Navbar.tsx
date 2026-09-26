@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Logo from "@/components/Logo";
 
 export default function Navbar() {
 	const [scrolled, setScrolled] = useState(false);
@@ -50,11 +51,12 @@ export default function Navbar() {
 		>
 			<nav className="max-w-[1180px] mx-auto px-8 flex items-center justify-between h-[76px]">
 				<a
-					className="font-display font-semibold text-[17px] tracking-[0.01em] cursor-pointer"
+					className="flex items-center cursor-pointer group py-1"
 					href="#top"
 					onClick={(e) => handleScrollTo(e, "top")}
+					aria-label="Home"
 				>
-					JL<span className="text-accent">.</span>DEV
+					<Logo />
 				</a>
 				<div className="flex items-center gap-5 sm:gap-8">
 					<div className="hidden sm:flex items-center gap-6 sm:gap-8">

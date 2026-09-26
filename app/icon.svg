@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 30" width="48" height="30">
+	<style>
+		.bracket {
+			fill: #D0D3D6;
+			font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+			font-weight: 600;
+			font-size: 15px;
+		}
+		.accent {
+			fill: #5C7CFF;
+			font-family: 'Space Grotesk', Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+			font-weight: 700;
+			font-size: 17px;
+			letter-spacing: -0.5px;
+		}
+		@media (prefers-color-scheme: light) {
+			.bracket {
+				fill: #4B5158;
+			}
+			.accent {
+				fill: #1E3AF0;
+			}
+		}
+	</style>
+	<text x="24" y="20.5" text-anchor="middle">
+		<tspan class="bracket">&lt;</tspan>
+		<tspan class="accent" dx="2.5">JL</tspan>
+		<tspan class="bracket" dx="2.5">&#125;</tspan>
+	</text>
+</svg>
