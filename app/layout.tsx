@@ -21,7 +21,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-	title: "John Lester — Software Developer",
+	title: "John Lester — Web Developer",
 	description:
 		"Personal portfolio for John Lester, a fourth-year Computer Science student and web developer.",
 	icons: {
