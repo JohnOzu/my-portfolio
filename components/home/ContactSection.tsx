@@ -2,17 +2,17 @@ import RevealOnScroll from "@/components/RevealOnScroll";
 
 export default function ContactSection() {
 	return (
-		<section id="contact" className="relative py-[120px]">
-			<RevealOnScroll className="max-w-[1180px] mx-auto px-8 relative z-[2] flex justify-between items-end flex-wrap gap-10">
+		<section id="contact" className="relative py-16 sm:py-[120px]">
+			<RevealOnScroll className="max-w-[1180px] mx-auto px-5 sm:px-8 relative z-[2] flex justify-between items-end flex-wrap gap-8 sm:gap-10">
 				<div>
 					<span className="font-mono text-xs text-accent tracking-[0.03em] block mb-2">
 						05 — contact
 					</span>
-					<h2 className="font-display font-semibold text-[clamp(32px,5vw,56px)] max-w-[14ch] tracking-[-0.01em]">
+					<h2 className="font-display font-semibold text-[clamp(28px,7vw,56px)] max-w-[14ch] tracking-[-0.01em]">
 						Let&apos;s build something.
 					</h2>
 				</div>
-				<div className="flex flex-col gap-4 font-mono text-sm">
+				<div className="flex flex-col gap-3.5 sm:gap-4 font-mono text-[13px] sm:text-sm">
 					<a
 						className="group inline-flex items-center gap-2.5 border-b border-line pb-0.5 transition-colors duration-200 w-fit hover:text-accent hover:border-accent"
 						href="mailto:jlc628549@gmail.com"

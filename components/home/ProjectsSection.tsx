@@ -4,15 +4,15 @@ import RevealOnScroll from "@/components/RevealOnScroll";
 
 export default function ProjectsSection() {
 	return (
-		<section id="work" className="relative py-[120px]">
-			<div className="max-w-[1180px] mx-auto px-8 relative z-[2]">
+		<section id="work" className="relative py-16 sm:py-[120px]">
+			<div className="max-w-[1180px] mx-auto px-5 sm:px-8 relative z-[2]">
 				<RevealOnScroll>
-					<div className="flex items-baseline justify-between mb-14 flex-wrap gap-4">
+					<div className="flex items-baseline justify-between mb-8 sm:mb-14 flex-wrap gap-4">
 						<div>
 							<span className="font-mono text-xs text-accent tracking-[0.03em]">
 								03 — selected work
 							</span>
-							<h2 className="font-display font-semibold text-[clamp(28px,4vw,40px)] mt-2.5 tracking-[-0.01em]">
+							<h2 className="font-display font-semibold text-[clamp(26px,4vw,40px)] mt-2 tracking-[-0.01em]">
 								A few things I&apos;ve built.
 							</h2>
 						</div>
@@ -21,30 +21,30 @@ export default function ProjectsSection() {
 						</span>
 					</div>
 				</RevealOnScroll>
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+				<div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
 					{projects.map((project, pIdx) => (
 						<RevealOnScroll key={project.id} delay={pIdx * 75} className="h-full">
 							<div className="group border border-line-soft bg-paper rounded-xs transition-[border-color,transform] duration-200 hover:border-accent hover:-translate-y-1 overflow-hidden flex flex-col h-full">
 								{/* Visual Viewport */}
-								<div className="bg-bg border-b border-line p-5 sm:p-6 flex flex-col justify-between relative min-h-[220px] sm:min-h-[250px] overflow-hidden">
+								<div className="bg-bg border-b border-line p-3.5 sm:p-6 flex flex-col justify-between relative min-h-[170px] sm:min-h-[250px] overflow-hidden">
 									{/* Viewport Top Ledger */}
-									<div className="flex items-center justify-between z-10 mb-3">
-										<div className="flex items-center gap-2">
-											<span className="font-mono text-xs text-ink-soft tracking-wider">
+									<div className="flex items-center justify-between gap-2 z-10 mb-2.5 sm:mb-3">
+										<div className="flex items-center gap-1.5 sm:gap-2 min-w-0">
+											<span className="font-mono text-[11px] sm:text-xs text-ink-soft tracking-wider whitespace-nowrap">
 												{project.code}
 											</span>
-											<span className="text-line-soft text-xs">/</span>
-											<span className="font-mono text-[11px] text-ink-soft/70 uppercase">
+											<span className="hidden sm:inline text-line-soft text-xs">/</span>
+											<span className="hidden sm:inline font-mono text-[11px] text-ink-soft/70 uppercase truncate">
 												{project.subBadge}
 											</span>
 										</div>
 										{project.isLive ? (
-											<span className="inline-flex items-center gap-1.5 font-mono text-[11.5px] text-accent border border-accent/20 bg-accent-soft px-2.5 py-0.5 rounded-full font-medium">
+											<span className="inline-flex items-center gap-1.5 font-mono text-[10.5px] sm:text-[11.5px] text-accent border border-accent/20 bg-accent-soft px-2 sm:px-2.5 py-0.5 rounded-full font-medium whitespace-nowrap shrink-0">
 												<span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
 												{project.status}
 											</span>
 										) : (
-											<span className="inline-flex items-center gap-1.5 font-mono text-[11.5px] text-ink-soft border border-line bg-paper px-2.5 py-0.5 rounded-full font-medium">
+											<span className="inline-flex items-center gap-1.5 font-mono text-[10.5px] sm:text-[11.5px] text-ink-soft border border-line bg-paper px-2 sm:px-2.5 py-0.5 rounded-full font-medium whitespace-nowrap shrink-0">
 												{project.status}
 											</span>
 										)}
@@ -53,7 +53,7 @@ export default function ProjectsSection() {
 									{/* Center Visual: Custom Image or Fallback Vector Schematic */}
 									<div className="my-auto flex items-center justify-center relative">
 										{project.image ? (
-											<div className="relative w-full h-[180px] sm:h-[210px] overflow-hidden border border-line rounded-xs">
+											<div className="relative w-full h-[140px] sm:h-[210px] overflow-hidden border border-line rounded-xs">
 												{/* eslint-disable-next-line @next/next/no-img-element */}
 												<img
 													src={project.image}
@@ -68,29 +68,29 @@ export default function ProjectsSection() {
 								</div>
 
 								{/* Content Body */}
-								<div className="p-6 sm:p-7 flex flex-col justify-between flex-1 bg-paper">
+								<div className="p-4 sm:p-7 flex flex-col justify-between flex-1 bg-paper">
 									<div>
-										<div className="flex items-center justify-between text-xs font-mono text-ink-soft mb-2.5">
-											<span className="uppercase tracking-wider">
+										<div className="flex items-center justify-between text-xs font-mono text-ink-soft mb-2 sm:mb-2.5">
+											<span className="uppercase tracking-wider text-[11px] sm:text-xs">
 												{project.category}
 											</span>
-											<span className="text-accent font-medium">
+											<span className="text-accent font-medium text-[11.5px] sm:text-xs">
 												{project.period}
 											</span>
 										</div>
-										<h3 className="font-display font-semibold text-2xl text-ink leading-snug mb-3 group-hover:text-accent transition-colors duration-200">
+										<h3 className="font-display font-semibold text-xl sm:text-2xl text-ink leading-snug mb-2 sm:mb-3 group-hover:text-accent transition-colors duration-200">
 											{project.title}
 										</h3>
-										<p className="text-[14px] text-ink-soft leading-[1.65] mb-5">
+										<p className="text-[13.5px] sm:text-[14px] text-ink-soft leading-[1.6] sm:leading-[1.65] mb-4 sm:mb-5">
 											{project.description}
 										</p>
 
 										{/* Tags */}
-										<div className="flex gap-2 flex-wrap mb-6">
+										<div className="flex gap-1.5 sm:gap-2 flex-wrap mb-4 sm:mb-6">
 											{project.tags.map((tag) => (
 												<span
 													key={tag}
-													className="text-[11.5px] font-mono text-ink-soft border border-line px-2.5 py-0.5 rounded-full"
+													className="text-[11px] sm:text-[11.5px] font-mono text-ink-soft border border-line px-2 sm:px-2.5 py-0.5 rounded-full"
 												>
 													{tag}
 												</span>
@@ -98,7 +98,7 @@ export default function ProjectsSection() {
 										</div>
 									</div>
 
-									<div className="pt-4 border-t border-line flex items-center justify-end gap-5 text-[13px]">
+									<div className="pt-3 sm:pt-4 border-t border-line flex items-center justify-end gap-4 sm:gap-5 text-[12.5px] sm:text-[13px]">
 										{project.githubUrl && (
 											<a
 												href={project.githubUrl}
