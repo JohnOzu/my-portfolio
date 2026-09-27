@@ -101,8 +101,8 @@ export const projects: Project[] = [
 		},
 		schematic: "bioacoustics",
 		image: "/projects/bantAIBukid.png",
-		liveUrl: "#",
-		githubUrl: "#",
+		liveUrl: "https://huggingface.co/spaces/JohnOzu/ph-eagle-sound-detector",
+		githubUrl: "https://huggingface.co/spaces/JohnOzu/ph-eagle-sound-detector/tree/main",
 	},
 	{
 		id: "katsu",
@@ -128,8 +128,8 @@ export const projects: Project[] = [
 		},
 		schematic: "kanban-tasks",
 		image: "/projects/katsu.png",
-		liveUrl: "#",
-		githubUrl: "#",
+		liveUrl: "https://katsu-qa-blond.vercel.app/",
+		githubUrl: "https://github.com/JohnOzu/katsu",
 	},
 	{
 		id: "trip-ticket-system",
@@ -180,6 +180,6 @@ export const projects: Project[] = [
 		},
 		schematic: "court-booking",
 		image: "/projects/prestigePBS.png",
-		liveUrl: "#",
+		liveUrl: "https://test.abacus.ph/",
 	},
 ];
