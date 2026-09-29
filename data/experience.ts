@@ -30,7 +30,7 @@ export const experiences: ExperienceItem[] = [
 	{
 		id: "usep-ojt",
 		code: "EXP // 02",
-		role: "Full-Stack Developer Intern",
+		role: "Full-Stack Web Developer Intern",
 		company: "University of Southeastern Philippines",
 		period: "July 2026",
 		location: "Davao City, Philippines",
