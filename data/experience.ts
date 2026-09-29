@@ -32,7 +32,7 @@ export const experiences: ExperienceItem[] = [
 		code: "EXP // 02",
 		role: "Full-Stack Developer Intern",
 		company: "University of Southeastern Philippines",
-		period: "June 2026",
+		period: "July 2026",
 		location: "Davao City, Philippines",
 		description:
 			"Spearheaded full-stack engineering for the university vehicle booking and dispatch management system with a four-person development team.",
