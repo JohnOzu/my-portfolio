@@ -13,7 +13,7 @@ export default function ProjectsSection() {
 								03 — selected work
 							</span>
 							<h2 className="font-display font-semibold text-[clamp(26px,4vw,40px)] mt-2 tracking-[-0.01em]">
-								A few things I&apos;ve built.
+								Things I&apos;ve built & contributed to
 							</h2>
 						</div>
 						<span className="font-mono text-xs text-ink-soft opacity-60">
